@@ -1,0 +1,28 @@
+<h1>Photo responses</h1>
+
+<p><%= link_to 'Add a New Photo Response', new_photo_response_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Photo</th>
+      <th>Reply</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @photo_responses.each do |photo_response| %>
+    <tr>
+      <td><%= photo_response.photo_id %></td>
+      <td><%= photo_response.reply_id %></td>
+      <td><%= link_to 'Show', photo_response_url(photo_response) %></td>
+      <td><%= link_to 'Edit', edit_photo_response_url(photo_response) %></td>
+      <td><%= link_to 'Destroy', photo_response_url(photo_response), method: 'delete', data: { confirm: "Do you really want to delete this photo_response?" } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

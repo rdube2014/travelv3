@@ -1,0 +1,32 @@
+<div class="page-header">
+  <h1>Photos</h1>
+</div>
+
+<p><%= link_to 'Add a New Photo', new_photo_url, class: 'btn btn-primary' %></p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Reply</th>
+      <th>Photo</th>
+      <th>Photo caption</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @photos.each do |photo| %>
+      <tr>
+        <td><%= photo.reply_id %></td>
+        <td><%= image_tag photo.photo_url, width: 100, class: "img-circle" %></td>
+        <td><%= photo.photo_caption %></td>
+        <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, photo_url(photo), class: 'btn btn-primary' %></td>
+        <td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_photo_url(photo), class: 'btn btn-warning' %></td>
+        <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, photo_url(photo), method: 'delete', data: { confirm: "Do you really want to delete this photo?" }, class: 'btn btn-danger' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

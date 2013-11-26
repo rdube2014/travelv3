@@ -1,0 +1,17 @@
+<h1>Editing Photo Response #<%= @photo_response.id %></h1>
+
+<%= form_tag(photo_response_url(@photo_response), method: 'patch') do %>
+  <div>
+    <%= label_tag :photo_id %><br />
+    <%= number_field_tag :photo_id, @photo_response.photo_id %>
+  </div>
+
+  <div>
+    <%= label_tag :reply_id %><br />
+    <%= number_field_tag :reply_id, @photo_response.reply_id %>
+  </div>
+
+  <div>
+    <%= submit_tag "Update Photo Response" %>
+  </div>
+<% end %>

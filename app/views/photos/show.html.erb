@@ -1,0 +1,16 @@
+<div class="page-header">
+  <h1>Photo #<%= @photo.id %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Reply</dt>
+  <dd><%= @photo.reply_id %></dd>
+
+  <dt>Photo url</dt>
+  <dd><%= image_tag @photo.photo_url, width: 100, class: "img-circle" %></dd>
+
+
+  <dt>Photo caption</dt>
+  <dd><%= @photo.photo_caption %></dd>
+
+</dl>
