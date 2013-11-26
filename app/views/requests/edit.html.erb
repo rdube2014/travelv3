@@ -48,7 +48,7 @@
   <div class="form-group">
     <%= label_tag :category, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
-      <%= select_tag :category, options_from_collection_for_select(["Leisure", "Business"], :to_s, :to_s, @request.category), class: 'form-control' %>
+      <%= select_tag :category, options_from_collection_for_select(Category.all, :id, :name, @request.category_id), class: 'form-control' %>
     </div>
   </div>
 
