@@ -48,10 +48,7 @@
   <div class="form-group">
     <%= label_tag :category, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
-      <select <%= text_field_tag :category, @request.category, class: 'form-control' %>
-        <option value="Leisure">Leisure</option>
-        <option value="Business">Business</option>
-       </select>
+      <%= select_tag :category, options_from_collection_for_select(["Leisure", "Business"], :to_s, :to_s, @request.category), class: 'form-control' %>
     </div>
   </div>
 

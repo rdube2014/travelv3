@@ -1,21 +1,5 @@
 Travel::Application.routes.draw do
-  # Routes for the Photo_response resource:
-  # CREATE
-  get '/photo_responses/new', controller: 'photo_responses', action: 'new', as: 'new_photo_response'
-  post '/photo_responses', controller: 'photo_responses', action: 'create', as: 'photo_responses'
-
-  # READ
-  get '/photo_responses', controller: 'photo_responses', action: 'index'
-  get '/photo_responses/:id', controller: 'photo_responses', action: 'show', as: 'photo_response'
-
-  # UPDATE
-  get '/photo_responses/:id/edit', controller: 'photo_responses', action: 'edit', as: 'edit_photo_response'
-  patch '/photo_responses/:id', controller: 'photo_responses', action: 'update'
-
-  # DELETE
-  delete '/photo_responses/:id', controller: 'photo_responses', action: 'destroy'
-  #------------------------------
-
+  devise_for :users
   # Routes for the Photo resource:
 
   root 'requests#index'

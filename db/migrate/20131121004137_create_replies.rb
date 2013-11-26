@@ -7,6 +7,8 @@ class CreateReplies < ActiveRecord::Migration
       t.integer :expert_star_rating
       t.text :expert_review
       t.integer :traveler_star_rating
+
+      t.timestamps
     end
   end
 end

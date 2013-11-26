@@ -9,6 +9,8 @@ class CreateRequests < ActiveRecord::Migration
       t.string :travel_to_state
       t.string :category
       t.text :request_text
+
+      t.timestamps
     end
   end
 end

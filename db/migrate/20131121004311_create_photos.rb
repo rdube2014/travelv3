@@ -4,6 +4,8 @@ class CreatePhotos < ActiveRecord::Migration
       t.integer :reply_id
       t.string :photo_url
       t.string :photo_caption
+
+      t.timestamps
     end
   end
 end
