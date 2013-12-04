@@ -1,5 +1,7 @@
 class Photo < ActiveRecord::Base
 	
 
-	has_many :replies, :through => :photo_responses
+belongs_to :reply
+
+
 end

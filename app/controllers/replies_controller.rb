@@ -6,6 +6,9 @@ class RepliesController < ApplicationController
 
   def show
     @reply = Reply.find_by(id: params[:id])
+    @allphotos = Photo.where(reply_id: params[:id])
+    @photo = Photo.find_by(id: params[:id])
+
   end
 
   def new
