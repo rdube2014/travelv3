@@ -19,8 +19,10 @@
   <dd><%= @reply.reply_text %></dd>
 
   <dt>Reply photo</dt>
-
-
+  <% @allphotos.each do |photo| %>
+  <dd><%= image_tag photo.photo_url, width: 80, class: "img-circle" %></dd>
+  <dd><%= photo.photo_caption %></dd>
+<% end %>
 <br>
 
 <div class="form-group">
