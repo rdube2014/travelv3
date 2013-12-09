@@ -1,4 +1,13 @@
 class RepliesController < ApplicationController
+before_action(:authorize_user)
+
+  def authorize_user
+    unless user_signed_in?
+      redirect_to new_user_session_path, notice: "You must be signed in"
+    end
+  end
+
+
 
   def index
     @replies = Reply.all
@@ -15,7 +24,7 @@ class RepliesController < ApplicationController
 
   def create
     @reply = Reply.new
-    @reply.user_id = params[:user_id]
+    @reply.user_id = current_user.id
     @reply.request_id = params[:request_id]
     @reply.reply_text = params[:reply_text]
     @reply.expert_star_rating = params[:expert_star_rating]

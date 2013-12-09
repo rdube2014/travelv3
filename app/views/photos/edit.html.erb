@@ -3,12 +3,8 @@
 </div>
 
 <%= form_tag(photo_url(@photo), method: 'patch', class: 'form-horizontal') do %>
-  <div class="form-group">
-    <%= label_tag "Link photo to reply #", nil, class: 'col-md-2 control-label' %>
-    <div class="col-md-6">
-       <%= select_tag :reply_id, options_from_collection_for_select(Reply.all, :id, :id, @photo.reply_id), class: 'form-control' %>
-    </div>
-  </div>
+
+<%= hidden_field_tag :reply_id, params[:id] %>
 
   <div class="form-group">
     <%= label_tag :photo_url, nil, class: 'col-md-2 control-label' %>
