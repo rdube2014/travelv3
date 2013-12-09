@@ -11,9 +11,13 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    @requests = current_user.requests
+    
+    @requests = Request.where(user_id: current_user.id)
     @replies = current_user.replies
     @photos = current_user.photos
+    
+    @expert_replies = current_user.expert_replies
+    @expert_photos = current_user.expert_photos
   end
 
   def show

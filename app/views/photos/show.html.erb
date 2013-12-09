@@ -1,16 +1,13 @@
 <div class="page-header">
-  <h1>Photo #<%= @photo.id %></h1>
+  <h4>A photo for added by <%= @photo.reply.user.full_name %> to a reply to <%= @photo.reply.request.user.full_name %>'s request for <%= @photo.reply.request.travel_to_city %> advice </h4>
 </div>
 
+
 <dl class="dl-horizontal">
-  <dt>Reply</dt>
-  <dd><%= @photo.reply_id %></dd>
+ 
 
-  <dt>Photo url</dt>
-  <dd><%= image_tag @photo.photo_url, width: 100, class: "img-circle" %></dd>
-
-
-  <dt>Photo caption</dt>
+  <dt>Photo</dt>
+  <dd><%= image_tag @photo.photo_url, width: 600, class: "img-square" %></dd>
   <dd><%= @photo.photo_caption %></dd>
 
 </dl>

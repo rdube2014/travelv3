@@ -12,6 +12,9 @@ has_many :photos, :through => :replies
 
 has_many :expert_replies, :class_name => "Reply"
 
+has_many :expert_photos, :through => :expert_replies, :source => :photos
+
+
 def full_name                                                                                                                                                                                     
   ([first_name, last_name] - ['']).compact.join(' ')                         
 end
