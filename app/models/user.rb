@@ -8,6 +8,8 @@ has_many :requests
 
 has_many :replies, :through => :requests
 
+has_many :photos, :through => :replies
+
 has_many :expert_replies, :class_name => "Reply"
 
 def full_name                                                                                                                                                                                     
@@ -16,7 +18,7 @@ end
 
 validates :first_name, :presence => true
 validates :last_name, :presence => true
-validates :user_name, :presence => true
+validates :User_name, :presence => true
 
 
 end
