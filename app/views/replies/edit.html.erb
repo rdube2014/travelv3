@@ -1,20 +1,15 @@
 <div class="page-header">
-  <h1>Editing Your Reply </h1>
+  <h1>Editing Your Reply about <%= @reply.request.travel_to_city %> for <%= @reply.request.user.full_name %> </h1>
 </div>
 
 <%= form_tag(reply_url(@reply), method: 'patch', class: 'form-horizontal') do %>
+  
   <div class="form-group">
-    <%= label_tag :user_id, nil, class: 'col-md-2 control-label' %>
-    <div class="col-md-6">
-       <%= select_tag :user_id, options_from_collection_for_select(User.all, :id, :full_name, @reply.user_id), class: 'form-control' %>
-    </div>
-  </div>
 
-  <div class="form-group">
-    <%= label_tag :request_id, nil, class: 'col-md-2 control-label' %>
-    <div class="col-md-6">
-    <%= select_tag :request_id, options_from_collection_for_select(Request.all, :id, :travel_to_city, @reply.request_id),class: 'form-control' %>
-    </div>
+   
+<%= hidden_field_tag :user_id, current_user.id %>
+<%= hidden_field_tag :request_id, @reply.request_id %>
+       
   </div>
 
   <div class="form-group">
@@ -31,7 +26,7 @@
   </div>
     <div class="form-group">
     <div class="col-md-offset-2 col-md-6">
-      <%= submit_tag "Add Photo to Existing Reply", class: 'btn btn-primary' %>
+     <%= link_to 'Add a Photo a an Existing Reply', new_photo_url, class: 'btn btn-primary' %></p>
     </div>
   </div>
 <% end %>

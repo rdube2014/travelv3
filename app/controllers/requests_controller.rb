@@ -1,5 +1,13 @@
 class RequestsController < ApplicationController
 
+before_action(:authorize_user)
+
+def authorize_user
+  unless user_signed_in?
+    redirect_to new_user_session_path, notice: "You must be signed in."
+  end
+end
+
 CATEGORIES = ['business', 'leisure']
 
   def index
@@ -15,7 +23,7 @@ CATEGORIES = ['business', 'leisure']
 
   def create
     @request = Request.new
-    @request.user_id = params[:user_id]
+    @request.user_id = current_user.id
     @request.created_date = params[:created_date]
     @request.trip_start_date = params[:trip_start_date]
     @request.trip_end_date = params[:trip_end_date]

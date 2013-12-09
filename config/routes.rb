@@ -5,7 +5,7 @@ Travel::Application.routes.draw do
   root 'requests#index'
 
   # CREATE
-  get '/photos/new', controller: 'photos', action: 'new', as: 'new_photo'
+  get '/photos/:id/new', controller: 'photos', action: 'new', as: 'new_photo'
   post '/photos', controller: 'photos', action: 'create', as: 'photos'
 
   # READ
