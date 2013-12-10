@@ -3,8 +3,14 @@
 </div>
 
 <%= form_tag(request_url(@request), method: 'patch', class: 'form-horizontal') do %>
+<<<<<<< HEAD
  
 <%= hidden_field_tag :user_id, current_user.id %>
+=======
+
+<%= hidden_field_tag :user_id, current_user.id %>
+
+>>>>>>> 210a6dfb2afe1ab224bf1a7b156e8a6cad0a50c0
 
   <div class="form-group">
     <%= label_tag :created_date, nil, class: 'col-md-2 control-label' %>
@@ -44,11 +50,19 @@
   <div class="form-group">
     <%= label_tag :category, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
+<<<<<<< HEAD
       <select <%= text_field_tag :category, nil, class: 'form-control' %>
         <option value="1">Leisure</option>
         <option value="2">Business</option>
        </select>
     </div>
+=======
+      <select <%= text_field_tag :category, @request.category, class: 'form-control' %>
+        <option value="1">Leisure</option>
+        <option value="2">Business</option>
+       </select>
+          </div>
+>>>>>>> 210a6dfb2afe1ab224bf1a7b156e8a6cad0a50c0
   </div>
 
   <div class="form-group">

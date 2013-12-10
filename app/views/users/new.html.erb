@@ -4,6 +4,7 @@
 
 <% if @user.errors.any? %>
   <ul>
+<<<<<<< HEAD
     <% @user.errors.full_messages.each do |message| %>
       <div class="alert alert-dismissable alert-danger">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -12,6 +13,16 @@
     <% end %>
   </ul>
   <% end %> 
+=======
+  <% @user.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      </div>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+    <% end %>
+>>>>>>> 210a6dfb2afe1ab224bf1a7b156e8a6cad0a50c0
 
 
 <%= form_tag(users_url, method: 'post', class: 'form-horizontal') do %>

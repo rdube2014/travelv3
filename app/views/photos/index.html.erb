@@ -2,10 +2,15 @@
   <h1>Photos</h1>
 </div>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 210a6dfb2afe1ab224bf1a7b156e8a6cad0a50c0
 <table class="table table-hover">
   <thead>
     <tr>
-      <th>Reply</th>
+      <th>#</th>
       <th>Photo</th>
       <th>Photo caption</th>
       <th></th>
@@ -17,11 +22,16 @@
   <tbody>
     <% @photos.each do |photo| %>
       <tr>
-        <td><%= photo.reply_id %></td>
+        <td><%= photo.id %></td>
         <td><%= image_tag photo.photo_url, width: 100, class: "img-circle" %></td>
         <td><%= photo.photo_caption %></td>
         <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, photo_url(photo), class: 'btn btn-primary' %></td>
+<<<<<<< HEAD
         
+=======
+         <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, photo_url(photo), method: 'delete', data: { confirm: "Do you really want to delete this photo?" }, class: 'btn btn-danger' %></td>
+
+>>>>>>> 210a6dfb2afe1ab224bf1a7b156e8a6cad0a50c0
       </tr>
     <% end %>
   </tbody>

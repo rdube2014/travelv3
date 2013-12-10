@@ -4,10 +4,14 @@
 
 <%= form_tag(requests_url, method: 'post', class: 'form-horizontal') do %>
   
+<<<<<<< HEAD
+=======
+
+>>>>>>> 210a6dfb2afe1ab224bf1a7b156e8a6cad0a50c0
   <div class="form-group">
     <%= label_tag :created_date, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
-      <%= text_field_tag :created_date, nil, class: 'form-control' %>
+      <%= text_field_tag :created_date, Time.now.strftime("%m/%d/%Y"), class: 'form-control' %>
     </div>
   </div>
 

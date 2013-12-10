@@ -1,4 +1,11 @@
 class PhotosController < ApplicationController
+  before_action(:authorize_user)
+
+  def authorize_user
+    unless user_signed_in?
+      redirect_to new_user_session_path, notice: "You must be signed in"
+    end
+  end
 
 before_action(:authorize_user)
 
@@ -24,13 +31,20 @@ end
     @photo.reply_id = params[:reply_id]
     @photo.photo_url = params[:photo_url]
     @photo.photo_caption = params[:photo_caption]
+<<<<<<< HEAD
   
+=======
+    
+
+
+>>>>>>> 210a6dfb2afe1ab224bf1a7b156e8a6cad0a50c0
     if @photo.save
       redirect_to photos_url, notice: "Photo created successfully."
     else
       render 'new'
     end
   end
+
 
   def edit
     @photo = Photo.find_by(id: params[:id])

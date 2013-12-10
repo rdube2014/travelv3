@@ -18,6 +18,7 @@
   <dt>Reply text</dt>
   <dd><%= @reply.reply_text %></dd>
 
+<<<<<<< HEAD
 <dt>Reply photo</dt>
     <% @allphotos.each do |photo| %>
   
@@ -25,12 +26,15 @@
   <dd><%= photo.photo_caption %></dd>
 <% end %>
 
+=======
+  <dt>Reply photo(s)</dt>
+  <% @allphotos.each do |photo| %>
+  <dd><%= image_tag photo.photo_url, width: 400, class: "img-square" %></dd>
+  <dd><%= photo.photo_caption %></dd>
+  <br>
+<% end %>
+>>>>>>> 210a6dfb2afe1ab224bf1a7b156e8a6cad0a50c0
 <br>
 
-<div class="form-group">
-    <div class="col-md-offset-1 col-md-6">
-      <%= submit_tag "Add Photo to Existing Reply", class: 'btn btn-primary' %>
-    </div>
-  </div>
   
 

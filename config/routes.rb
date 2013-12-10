@@ -2,6 +2,7 @@ Travel::Application.routes.draw do
   devise_for :users
   # Routes for the Photo resource:
 
+  
   root 'requests#index'
 
   # CREATE

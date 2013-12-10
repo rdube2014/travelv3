@@ -1,7 +1,14 @@
 <div class="page-header">
+<<<<<<< HEAD
   <h1>View or Edit My Profile</h1>
 </div>
 
+=======
+  <h2>1. View or Edit My Profile Information</h2>
+</div>
+
+
+>>>>>>> 210a6dfb2afe1ab224bf1a7b156e8a6cad0a50c0
 <table class="table table-hover">
   <thead>
     <tr>
@@ -20,7 +27,11 @@
   </thead>
 
   <tbody>
+<<<<<<< HEAD
    
+=======
+  
+>>>>>>> 210a6dfb2afe1ab224bf1a7b156e8a6cad0a50c0
       <tr>
         <td><%= current_user.first_name %></td>
         <td><%= current_user.last_name %></td>
@@ -34,6 +45,7 @@
         <td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_user_url(current_user), class: 'btn btn-warning' %></td>
         <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, user_url(current_user), method: 'delete', data: { confirm: "Do you really want to delete this user?" }, class: 'btn btn-danger' %></td>
       </tr>
+<<<<<<< HEAD
    
   </tbody>
 </table>
@@ -41,6 +53,12 @@
 <br>
 
 <h1>View or Edit My Requests</h1>
+=======
+    </table>
+
+    <br>
+<h2>2. View or Edit My Requests </h2>
+>>>>>>> 210a6dfb2afe1ab224bf1a7b156e8a6cad0a50c0
 
 <table class="table table-hover">
   <thead>
@@ -59,8 +77,12 @@
     </tr>
   </thead>
 
+<<<<<<< HEAD
 
 <tbody>
+=======
+  <tbody>
+>>>>>>> 210a6dfb2afe1ab224bf1a7b156e8a6cad0a50c0
     <% @requests.each do |request| %>
       <tr>
         <td><%= request.user.full_name %></td>
@@ -74,11 +96,73 @@
         <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, request_url(request), class: 'btn btn-primary' %></td>
         <td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_request_url(request), class: 'btn btn-warning' %></td>
         <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, request_url(request), method: 'delete', data: { confirm: "Do you really want to delete this request?" }, class: 'btn btn-danger' %></td>
+<<<<<<< HEAD
+=======
       </tr>
     <% end %>
   </tbody>
 </table>
 
+
+<br>
+<h2>3. View or Edit My Replies </h2>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Expert</th>
+      <th>Trip Title</th>
+      <th>Reply text</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @expert_replies.each do |reply| %>
+      <tr>
+        <td><%= reply.user.full_name %></td>
+        <td><%= reply.request.travel_to_city %></td>
+        <td><%= reply.reply_text %></td>
+        <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, reply_url(reply), class: 'btn btn-primary' %></td>
+        <td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_reply_url(reply), class: 'btn btn-warning' %></td>
+        <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, reply_url(reply), method: 'delete', data: { confirm: "Do you really want to delete this reply?" }, class: 'btn btn-danger' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<h2>4. View or Edit My Photos </h2>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Reply</th>
+      <th>Photo</th>
+      <th>Photo caption</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @expert_photos.each do |photo| %>
+      <tr>
+        <td><%= photo.reply_id %></td>
+        <td><%= image_tag photo.photo_url, width: 100, class: "img-circle" %></td>
+        <td><%= photo.photo_caption %></td>
+        <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, photo_url(photo), class: 'btn btn-primary' %></td>
+        <td><%= link_to '<i class="fa fa-edit"></i>'.html_safe, edit_photo_url(photo), class: 'btn btn-warning' %></td>
+        <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, photo_url(photo), method: 'delete', data: { confirm: "Do you really want to delete this photo?" }, class: 'btn btn-danger' %></td>
+>>>>>>> 210a6dfb2afe1ab224bf1a7b156e8a6cad0a50c0
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<<<<<<< HEAD
 <br>
 
 <h1>View or Edit My Replies</h1>
@@ -138,3 +222,6 @@
     <% end %>
   </tbody>
 </table>
+=======
+ 
+>>>>>>> 210a6dfb2afe1ab224bf1a7b156e8a6cad0a50c0

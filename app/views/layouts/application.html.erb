@@ -42,8 +42,13 @@
         <li><%= link_to "My Info", users_url %></li>
         <li><%= link_to "Requests", requests_url %></li>
         <li><%= link_to "Replies", replies_url %></li>
+<<<<<<< HEAD
         <% if user_signed_in? %>
           <li><%= link_to current_user.email, edit_user_registration_path %></li>
+=======
+           <% if user_signed_in? %>
+          <li><%= link_to current_user.email, edit_user_url(current_user.id) %></li>
+>>>>>>> 210a6dfb2afe1ab224bf1a7b156e8a6cad0a50c0
           <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
         <% else %>
           <li><%= link_to "Sign up", new_user_registration_path %></li>

@@ -8,6 +8,10 @@ before_filter :configure_devise_params, if: :devise_controller?
     devise_parameter_sanitizer.for(:sign_up) do |u|
       u.permit(:first_name, :last_name, :home_city, :home_state, :home_country, :photo_url, :user_name, :email, :password, :password_confirmation)
     end
+<<<<<<< HEAD
   end
+=======
+end
+>>>>>>> 210a6dfb2afe1ab224bf1a7b156e8a6cad0a50c0
   
 end

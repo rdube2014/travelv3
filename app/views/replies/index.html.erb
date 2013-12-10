@@ -1,9 +1,13 @@
 <div class="page-header">
-  <h1>Replies</h1>
+  <h1>All Replies</h1>
 </div>
 
 <p><%= link_to 'Add a New Reply', new_reply_url, class: 'btn btn-primary' %>
+<<<<<<< HEAD
 
+=======
+  </p>
+>>>>>>> 210a6dfb2afe1ab224bf1a7b156e8a6cad0a50c0
 
 <table class="table table-hover">
   <thead>
@@ -24,8 +28,14 @@
         <td><%= reply.request.travel_to_city %></td>
         <td><%= reply.reply_text %></td>
         <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, reply_url(reply), class: 'btn btn-primary' %></td>
+<<<<<<< HEAD
         
        </tr>
+=======
+    
+       
+      </tr>
+>>>>>>> 210a6dfb2afe1ab224bf1a7b156e8a6cad0a50c0
     <% end %>
   </tbody>
 </table>
