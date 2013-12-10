@@ -1,3 +1,8 @@
+# Hey Raghu - Please log-in to our web app as Richard.J.Dube@gmail.com with the password of "11111111" (without the quotes). 
+
+ 
+
+
 == README
 
 This README would normally document whatever steps are necessary to get the
