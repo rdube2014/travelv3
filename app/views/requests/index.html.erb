@@ -14,7 +14,7 @@
       <th>Travel to city</th>
       <th>Travel to state</th>
       <th>Category</th>
-      <th>Request text</th>
+      <th>Request preview</th>
       <th></th>
       <th></th>
       <th></th>
@@ -31,7 +31,7 @@
         <td><%= request.travel_to_city %></td>
         <td><%= request.travel_to_state %></td>
         <td><%= request.category %></td>
-        <td><%= request.request_text %></td>
+        <td><%= truncate(request.request_text, length: 50) %></td>
         <td><%= link_to '<i class="fa fa-search-plus"></i>'.html_safe, request_url(request), class: 'btn btn-primary' %></td>
 
       </tr>

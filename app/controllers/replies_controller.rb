@@ -20,6 +20,7 @@ before_action(:authorize_user)
   end
 
   def new
+    @reply= Reply.new
   end
 
   def create

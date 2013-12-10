@@ -18,6 +18,7 @@ CATEGORIES = ['business', 'leisure']
   end
 
   def new
+    @request=Request.new
   end
 
   def create

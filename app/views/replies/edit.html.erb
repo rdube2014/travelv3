@@ -1,4 +1,16 @@
 <div class="page-header">
+  <% if @reply.errors.any? %>
+  <ul>
+  <% @reply.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <ul><%= message %></ul>
+      </div>
+      <% end %>
+    </ul>
+    <% end %>
+
+
   <h2>Editing Your Reply about <%= @reply.request.travel_to_city %> for <%= @reply.request.user.full_name %> </h2>
 </div>
 

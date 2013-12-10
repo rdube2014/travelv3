@@ -6,4 +6,7 @@ belongs_to :user
 
 belongs_to :request
 
+validates :reply_text, :presence => true
+
+
 end
