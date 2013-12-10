@@ -7,7 +7,7 @@
   <div class="form-group">
     <%= label_tag :created_date, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
-      <%= text_field_tag :created_date, nil, class: 'form-control' %>
+      <%= text_field_tag :created_date, Time.now.strftime("%m/%d/%Y"), class: 'form-control' %>
     </div>
   </div>
 
